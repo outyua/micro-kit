@@ -3,7 +3,7 @@ package server
 import (
 	"context"
 	"encoding/json"
-	"github.com/micro/go-micro/client"
+	"github.com/micro/go-micro/v2/client"
 	demoSrv "micro-kit/apps/srv/demo/api/demo"
 	"micro-kit/global/reg"
 	"net/http"

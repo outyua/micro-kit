@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/micro/go-micro"
-	"github.com/micro/go-micro/util/log"
+	"github.com/micro/go-micro/v2"
+	"github.com/micro/go-micro/v2/util/log"
 	demo "micro-kit/apps/srv/demo/api/demo"
 	srv "micro-kit/apps/srv/demo/internal/service"
 	"micro-kit/apps/srv/demo/internal/subscriber"
@@ -12,7 +12,6 @@ import (
 func main() {
 	// New Service
 	meta := reg.NewSrvDemo()
-
 	service := micro.NewService(
 		micro.Name(meta.GetName()),
 		micro.Version(meta.GerVersion()),

@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	"github.com/micro/go-micro/util/log"
+	"github.com/micro/go-micro/v2/util/log"
 
 	demo "micro-kit/apps/srv/demo/api/demo"
 )
