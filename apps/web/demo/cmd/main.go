@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/micro/go-micro/v2/util/log"
 	"github.com/micro/go-micro/v2/web"
+	"log"
 	handler "micro-kit/apps/web/demo/internal/server"
 	"micro-kit/global/reg"
 	"net/http"

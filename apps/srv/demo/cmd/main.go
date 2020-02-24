@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/micro/go-micro/v2"
-	"github.com/micro/go-micro/v2/util/log"
+	"log"
 	demo "micro-kit/apps/srv/demo/api/demo"
 	srv "micro-kit/apps/srv/demo/internal/service"
 	"micro-kit/apps/srv/demo/internal/subscriber"
 	"micro-kit/global/reg"
+
+	"github.com/micro/go-micro/v2"
 )
 
 func main() {
