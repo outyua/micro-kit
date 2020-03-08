@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package auth;
+
+message LoginReq {
+    string username = 1;
+    string password = 2;
+}
+
+message Token {
+    string token  = 1;
+}
+
+message LoginRes {
+    bool isExist = 1;
+    bool available = 2;
+    Token token = 3;
+}
+
+message OptResult {
+    bool ok = 1;
+}
+
+message AdminInfo {
+    int64 uid = 1;
+    string name = 2;
+    string avatar = 3;
+    int64 lastLoginTime = 4;
+    int64 registerTime = 5;
+    repeated string roles = 6;
+    enum Status {
+        NotExists = 0;
+        Available = 1;
+        NotAvailable = 2;
+    }
+    Status status = 7;
+}
+
+service Auth {
+    rpc Login(LoginReq) returns (LoginRes) {}
+    rpc Logout(Token)returns(OptResult){}
+    rpc Info(Token) returns(AdminInfo) {}
+}
